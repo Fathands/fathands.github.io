@@ -1,11 +1,11 @@
 # Site settings
-title: BY Blog
-SEOTitle: 柏荧的博客 | BY Blog
+title: Aiden Blog
+SEOTitle: 前端首席鼓励师 | Aiden Blog Blog
 header-img: img/post-bg-desk.jpg
-email: qiubaiying@gmail.com
+email: 448118477@qq.com
 description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, 柏荧的博客, qiubaiying, 邱柏荧, iOS, Apple, iPhone"
-url: "http://qiubaiying.github.io"          # your host, for absolute URL
+keyword: "fathands, Aiden Blog, 前端首席鼓励师, aidenhuang, javascript, Vue, webpack"
+url: "http://fathands.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
 
