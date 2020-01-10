@@ -53,7 +53,9 @@ header-img: "img/bg/post-bg-rwd.jpg"
     var $select = document.querySelector("select");
 
     // bind hashchange event
-    window.addEventListener('hashchange', _render);
+    if ($select && $select.selectedIndex) {
+        window.addEventListener('hashchange', _render);
+    }
 
     // handle render
     function _render(){
