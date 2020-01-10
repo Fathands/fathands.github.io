@@ -97,4 +97,7 @@ service-worker: true
 
 
 # Friends
-friends: []
+friends: [{
+  title: "掘金-前端首席鼓励师",
+  href: "https://juejin.im/user/580b08e9a0bb9f0061b8d250"
+}]
