@@ -68,7 +68,7 @@ const foo = (item) => item.id
 得到的`抽象语法树`如下图。
 这是在[AST Explorer](https://astexplorer.net/)转换得到的。
 
-![抽象语法树](https://user-gold-cdn.xitu.io/2019/8/27/16cd0f2393824733?w=1059&h=1172&f=png&s=57135 "抽象语法树")
+![抽象语法树](https://raw.githubusercontent.com/Fathands/images/master/ast-vue-mp/ast-pic1.jpg "抽象语法树")
 
 可以看到我们的js代码已经被转换成一个`json对象`，这个json对象的描述了这段代码。
 我们可以通过拿到这个json对象去进行树形遍历，从而把这一段js代码进行加工成一段我们想要的代码。比如可以把它转换成一段`ES5的代码`。
@@ -98,7 +98,7 @@ const sfc = compiler.parseComponent(vueFileContent)
 
 得到的sfc的json文件的结构如下：
 
-![SFC](https://user-gold-cdn.xitu.io/2019/8/27/16cd0f239372a22c?w=1619&h=1218&f=png&s=93648 "SFC")
+![SFC](https://raw.githubusercontent.com/Fathands/images/master/ast-vue-mp/ast-pic2.jpg "SFC")
 
 可以看到单个的vue文件已经被解析成了三个部分，styles是一个数组，因为在vue文件中可以写多个style标签。
 我们拿到解析后的json文件之后，就可以正式开始了。
@@ -236,7 +236,7 @@ console.log(result.code.trim())
 现在可以正式开始了。
 
 首先来看一下vue文件中script的基本结构。
-![script的基本结构](https://user-gold-cdn.xitu.io/2019/8/27/16cd23cebbc758df?w=1162&h=1250&f=png&s=89760 "script的基本结构")
+![script的基本结构](https://raw.githubusercontent.com/Fathands/images/master/ast-vue-mp/ast-pic3.jpg "script的基本结构")
 
 可以看到在` export default `中有` directives `和` components `两个属性与import导入的文件有关
 
@@ -702,10 +702,10 @@ const traverseJsVisitor = {
 这里有一个例子。
 
 转换前的vue代码：
-![转换前的vue代码](https://user-gold-cdn.xitu.io/2019/8/27/16cd23cec27592bb?w=1031&h=3348&f=png&s=194639 "转换前的vue代码")
+![转换前的vue代码](https://raw.githubusercontent.com/Fathands/images/master/ast-vue-mp/ast-pic4.jpg "转换前的vue代码")
 
 转换后的小程序代码：
-![转换后的小程序代码](https://user-gold-cdn.xitu.io/2019/8/27/16cd23cebbdb47ea?w=1058&h=2758&f=png&s=176728 "转换后的小程序代码")
+![转换后的小程序代码](https://raw.githubusercontent.com/Fathands/images/master/ast-vue-mp/ast-pic5.jpg "转换后的小程序代码")
 <a name="template---wxml文件"></a>
 
 ## template -> wxml文件
@@ -734,7 +734,7 @@ const wxmlResult = parseHtml(astTplRes)
 ```
 
 解析出来的 AST树的结果如下：
-![template AST树](https://user-gold-cdn.xitu.io/2019/8/27/16cd23cec16554f2?w=1111&h=944&f=png&s=60791 "template AST树")
+![template AST树](https://raw.githubusercontent.com/Fathands/images/master/ast-vue-mp/ast-pic6.jpg "template AST树")
 
 可以看出对我们有用的属性就几个
 
@@ -972,10 +972,10 @@ const createWxml = function(node) {
 转换完的格式还是需要自己调整一下。
 
 转换前的vue代码：
-![转换前的template代码](https://user-gold-cdn.xitu.io/2019/8/27/16cd23cec297acf7?w=1192&h=4120&f=png&s=375129 "转换前的template代码")
+![转换前的template代码](https://raw.githubusercontent.com/Fathands/images/master/ast-vue-mp/ast-pic7.jpg "转换前的template代码")
 
 转换后的小程序代码：
-![转换后的小程序wxml代码](https://user-gold-cdn.xitu.io/2019/8/27/16cd23cec35a69f2?w=1176&h=6439&f=png&s=434371 "转换后的小程序wxml代码")
+![转换后的小程序wxml代码](https://raw.githubusercontent.com/Fathands/images/master/ast-vue-mp/ast-pic8.jpg "转换后的小程序wxml代码")
 
 <a name="总结"></a>
 
